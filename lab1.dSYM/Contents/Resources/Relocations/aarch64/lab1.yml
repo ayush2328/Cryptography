@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ayush/Downloads/Personal Projects/Cryptography/output/lab1'
+relocations:     []
+...
