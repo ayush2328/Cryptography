@@ -12,7 +12,7 @@ class CryptoApp(QWidget):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("AES Encryption & Decryption Tool")
+        self.setWindowTitle("AES Encryption & Decryption Tool Made By Ayush")
         self.setGeometry(200, 200, 600, 500)
 
         layout = QVBoxLayout()
@@ -26,7 +26,7 @@ class CryptoApp(QWidget):
         self.gen_key_btn.clicked.connect(self.generate_key)
         layout.addWidget(self.gen_key_btn)
 
-        self.input_label = QLabel("Message / Encrypted Text:")
+        self.input_label = QLabel("Message or Text -> Encrypt/ Encrypted Text -> Decrypt:")
         self.input_text = QTextEdit()
         layout.addWidget(self.input_label)
         layout.addWidget(self.input_text)
@@ -50,7 +50,7 @@ class CryptoApp(QWidget):
     def generate_key(self):
         self.key = Fernet.generate_key()
         self.key_input.setText(self.key.decode())
-        QMessageBox.information(self, "Key Generated", "Secret key generated.\nSave it securely.")
+        # QMessageBox.information(self, "Key Generated", "Secret key generated.\nSave it securely.")
 
     def encrypt_message(self):
         if not self.key:
